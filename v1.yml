@@ -1,0 +1,22 @@
+name: 'some basic linux command'
+description: 'Run the list print show who am i'
+runs:
+  using: "composite"
+  steps:
+    - name: List Files in Repository (ls)
+      run: |
+        echo "Running ls command:"
+        ls -l
+      shell: bash
+
+    - name: Print Working Directory (pwd)
+      run: |
+        echo "Running pwd command:"
+        pwd
+      shell: bash
+
+    - name: Show Current User (whoami)
+      run: |
+        echo "Running whoami command:"
+        whoami
+      shell: bash
